@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: ping the server
-      ansible.builtin.ping: null
+      ansible.builtin.ping:
