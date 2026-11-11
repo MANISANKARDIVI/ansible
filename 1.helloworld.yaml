@@ -1,7 +1,7 @@
 ---
 - name: Print the Hello world
   hosts: local
-  connection: local
+  connection: local   # no need of username and password
   become: true
   tasks:
     - name: print the message
