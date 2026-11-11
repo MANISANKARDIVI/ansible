@@ -6,3 +6,4 @@
   tasks:
     - name: print the message
       ansible.builtin.debug:
+        msg: "Hello Ansible"
