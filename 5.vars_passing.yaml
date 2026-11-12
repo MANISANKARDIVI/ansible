@@ -10,3 +10,6 @@
     - name: global level variables passing in tasks
       ansible.builtin.debug:
         msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
+
+
+# vars.yaml is file passing variables
