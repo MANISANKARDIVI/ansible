@@ -3,14 +3,14 @@
   hosts: local
   connection: local
   become: true
-  vars_prompt:
+  vars_prompt:  # This keyword used for vars_prompt
     - name: USERNAME
       prompt: Enter Your Username
-      private: false
+      private: false   # In terminal username display while typing
 
     - name: PASSWORD
       prompt: Enter Your password
-      private: true
+      private: true     # In terminal password wont display while typing
 
   tasks:
     - name: Variables for passing through terminal
