@@ -7,12 +7,12 @@
     NUMBER: 79
 
   tasks:
-    - name : print number is less than or equal to 100
+    - name : print number is lesser than  to 100
       ansible.builtin.debug:
-        msg: "Given number is {{ NUMBER }} is less than or equal to 100"
-      when: NUMBER <= 100
+        msg: "Given number is {{ NUMBER }} is lesser than to 100"
+      when: NUMBER < 100
 
-    - name: print number is greater than or equal to 100
+    - name: print number is greater than to 100
       ansible.builtin.debug:
-        msg: "Given number is {{ NUMBER }} is greater than or equal to 100"
-      when: NUMBER >= 100
+        msg: "Given number is {{ NUMBER }} is greater than to 100"
+      when: NUMBER > 100
