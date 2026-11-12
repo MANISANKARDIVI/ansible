@@ -7,3 +7,5 @@
     - name: Variables for passing through terminal
       ansible.builtin.debug:
         msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
+
+## we are passing variables in inventory.ini file
