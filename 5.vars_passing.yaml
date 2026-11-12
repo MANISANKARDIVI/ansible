@@ -1,0 +1,12 @@
+---
+- name: Variables in ansible
+  hosts: local
+  connection: local
+  become: true
+  vars_files:
+    - vars.yaml
+
+  tasks:
+    - name: global level variables passing in tasks
+      ansible.builtin.debug:
+        msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
