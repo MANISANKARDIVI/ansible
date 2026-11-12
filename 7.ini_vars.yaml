@@ -6,4 +6,4 @@
   tasks:
     - name: Variables for passing through terminal
       ansible.builtin.debug:
-        msg: "You Entered username: {{ USERNAME }} and password: {{ PASSWORD }}"
+        msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
