@@ -1,0 +1,71 @@
+
+---
+- name: Demonstrate Ansible Data Types
+  hosts: localhost
+  connection: local
+
+  vars:
+    # 1. String
+    COURSE: "DevOps"
+    TRAINER: "Ashok"
+
+    # 2. Integer
+    DURATION: 60
+    EXPERIENCE: 4
+
+    # 3. Float
+    RATING: 4.5
+    PRICE: 99.99
+
+    # 4. Boolean
+    INSTALL_NGINX: true
+    ENABLE_SERVICE: false
+
+    # 5. List
+    TOOLS:
+      - Ansible
+      - Docker
+      - Kubernetes
+      - Terraform
+
+    # 6. Dictionary
+    EMPLOYEE:
+      NAME: "Mani"
+      ROLE: "DevOps Engineer"
+      EXPERIENCE: 4
+
+    # 7. Null
+    PASSWORD: null
+
+  tasks:
+    - name: Display String
+      ansible.builtin.debug:
+        msg: "I am learning {{ COURSE }} and my trainer is {{ TRAINER }}"
+
+    - name: Display Integer
+      ansible.builtin.debug:
+        msg: "Duration is {{ DURATION }} hours and experience is {{ EXPERIENCE }} years"
+
+    - name: Display Float
+      ansible.builtin.debug:
+        msg: "Rating is {{ RATING }} and price is {{ PRICE }}"
+
+    - name: Display Boolean
+      ansible.builtin.debug:
+        msg: "Install Nginx: {{ INSTALL_NGINX }}, Enable Service: {{ ENABLE_SERVICE }}"
+
+    - name: Display List
+      ansible.builtin.debug:
+        msg: "My tools are {{ TOOLS }}"
+
+    - name: Access List Element
+      ansible.builtin.debug:
+        msg: "My first tool is {{ TOOLS[0] }}"
+
+    - name: Display Dictionary
+      ansible.builtin.debug:
+        msg: "Employee: {{ EMPLOYEE.NAME }}, Role: {{ EMPLOYEE.ROLE }}"
+
+    - name: Display Null
+      ansible.builtin.debug:
+        var: PASSWORD
