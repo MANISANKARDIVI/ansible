@@ -17,6 +17,6 @@
       vars:   # these are local variables or task level variables
         COURSE: AWS
         DURATION: 60hr
-        TRAINER: Ashok
+        TRAINER: Abhishek
       ansible.builtin.debug:
         msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
