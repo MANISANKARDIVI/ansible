@@ -1,0 +1,12 @@
+---
+- name: Variables in ansible
+  hosts: local
+  connection: local
+  become: true
+  tasks:
+    - name: Variables for passing through terminal
+      ansible.builtin.debug:
+        msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
+
+## we are passing variables in terminal directly.
+# $ ansible-playbook -i inventory.ini -e COURSE="" -e DURATION="" -e TRAINER=""
