@@ -3,12 +3,20 @@
   hosts: local
   connection: local
   become: true
-  vars:
+  vars:     # These are global level variables
     COURSE: DevSecOps
     DURATION: 120hr
     TRAINER: Siva kumar Reddy
 
   tasks:
-    - name: variables passing in tasks
+    - name: global level variables passing in tasks
+      ansible.builtin.debug:
+        msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
+
+    - name: local variables passing inside of  tasks
+      vars:   # these are local variables or task level variables
+        COURSE: AWS
+        DURATION: 60hr
+        TRAINER: Ashok
       ansible.builtin.debug:
         msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
