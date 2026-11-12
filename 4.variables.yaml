@@ -1,0 +1,14 @@
+---
+- name: Variables in ansible
+  hosts: local
+  connection: local
+  become: true
+  vars:
+    COURSE: DevSecOps
+    DURATION: 120hr
+    TRAINER: Siva kumar Reddy
+
+  tasks:
+    - name: variables passing in tasks
+      ansible.builtin.debug:
+        msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
