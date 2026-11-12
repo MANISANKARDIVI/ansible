@@ -8,4 +8,4 @@
       ansible.builtin.debug:
         msg: "I am Learning {{ COURSE }} course, Duration was {{ DURATION }} and Trainer was {{ TRAINER }}"
 
-## we are passing variables in inventory.ini file
+## we are passing variables in inventory.ini file under [local:vars]
