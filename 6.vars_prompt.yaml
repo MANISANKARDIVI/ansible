@@ -13,6 +13,6 @@
       private: true
 
   tasks:
-    - name: Variables for passing through terminal
-      ansible.bulitin.debug:
-        msg: "You Entered username: {{ USERNAME }} and password: {{ PASSWORD }}"
+  - name: Variables for passing through terminal
+    ansible.bulitin.debug:
+      msg: "You Entered username: {{ USERNAME }} and password: {{ PASSWORD }}"
