@@ -1,0 +1,13 @@
+---
+- name: Installing multiple packages
+  hosts: frontend
+  become: true
+  tasks:
+    - name: Install packages
+      ansible.builtin.package:
+        name: {{ item }}
+        state: present
+      loop:
+        - nginx
+        - docker
+        - git
