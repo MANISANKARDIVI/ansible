@@ -4,6 +4,6 @@
   connection: local
   become: true
   tasks:
-    - name: Gathering facts
+    - name: printing facts
       ansible.builtin.debug:
-        msg: "{{ gather_facts }}"
+        msg: "{{ ansible_facts }}"
