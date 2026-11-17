@@ -5,11 +5,9 @@
   become: true
   tasks:
     - name: Installing packages
-      ansible.builtin.package:
-        name: {{ item }}
-        state: present
+      ansible.builtin.debug:
+        msg: {{ item }}
       loop:
-        - nginx
-        - git
-        - mysql
-        - docker
+        - mani
+        - sankar
+        - divi
