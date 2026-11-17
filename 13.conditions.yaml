@@ -10,7 +10,7 @@
       when: ansible_os_familly == "RedHat"
 
     - name: Installing nginx in Debian machines
-      ansible.builtin.debain:
+      ansible.builtin.apt:
         name: nginx
         state: present
       when: ansible_os_family == "Debian"
