@@ -1,0 +1,15 @@
+---
+- name: gathering facts
+  hosts: local
+  connection: local
+  become: true
+  tasks:
+    - name: Installing packages
+      ansible.builtin.package:
+        name: {{ item }}
+        state: present
+      loop:
+        - nginx
+        - git
+        - mysql
+        - docker
