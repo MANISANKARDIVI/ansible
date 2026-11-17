@@ -1,12 +1,12 @@
 ---
-- name: gathering facts
+- name: loops
   hosts: local
   connection: local
   become: true
   tasks:
-    - name: Installing packages
+    - name: print names
       ansible.builtin.debug:
-        msg: {{ item }}
+        msg: "Hello, {{ item }}"
       loop:
         - mani
         - sankar
