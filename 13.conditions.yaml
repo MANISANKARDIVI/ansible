@@ -1,0 +1,16 @@
+---
+- name: gathering facts
+  hosts: frontend
+  become: true
+  tasks:
+    - name: Installing nginx in RedHat machines
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+      when: ansible_os_familly == "RedHat"
+
+    - name: Installing nginx in Debian machines
+      ansible.builtin.debain:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Debian"
